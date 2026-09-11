@@ -1,5 +1,5 @@
 pipeline {
-    agent {label label 'built-in'}
+    agent {label 'built-in'}
     stages {
         stage('Build') {
             steps {
@@ -14,4 +14,5 @@ pipeline {
 }
     
     }
+
 }
