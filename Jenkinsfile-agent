@@ -1,0 +1,12 @@
+pipeline{
+    agent {label 'ubuntu-agent'}
+    stages {
+        stage('Build') {
+            steps {
+                sh 'echo "Hello Dhivakar" > build.txt'
+                sh 'hostname'
+                sh 'whoami'
+            }
+        } 
+    }      
+}
