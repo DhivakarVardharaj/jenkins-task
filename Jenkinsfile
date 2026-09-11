@@ -1,16 +1,23 @@
 pipeline {
-    agent any
+    agent {
+        label 'ubuntu-agent'
+    }
     stages {
-        stage('First') {
+        stage('Build') {
             steps {
                 echo 'Hello , From Dhivakar'
             }
         }
 
-        stage('Second') {
+        stage('test') {
             steps {
                 echo 'print Success'
     }
 }
+        stage('Deploy') {
+            steps {
+                echo 'print Success'
+            }
+        }
     }
 }
