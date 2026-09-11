@@ -1,15 +1,15 @@
 pipeline {
-    agent {label 'ubuntu-agent'}
+    agent {label label 'built-in'}
     stages {
         stage('Build') {
             steps {
-               echo "Hello , From Dhivakar"
+              bat 'echo "Hello Dhivakar" > build.txt'
             }
         }
 
-        stage('test') {
+        stage('Archive') {
             steps {
-               echo "test success" 
+               archiveArtifacts artifacts: 'build.txt'  
     }
 }
     
