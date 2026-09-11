@@ -1,21 +1,17 @@
 pipeline {
-    agent {label 'built-in'}
+    agent any
     stages {
         stage('Build') {
             steps {
-                echo 'Hello , From Dhivakar'
+               sh 'echo "Hello , From Dhivakar"' > build.txt
             }
         }
 
         stage('test') {
             steps {
-                echo 'print Success'
+                archiveArtifacts artifacts: 'build.txt' 
     }
 }
-        stage('Deploy') {
-            steps {
-                echo 'print Success'
-            }
-        }
+    
     }
 }
