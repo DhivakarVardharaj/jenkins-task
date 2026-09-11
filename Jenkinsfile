@@ -1,0 +1,14 @@
+pipeline {
+    agent any
+    stages {
+        stage('First') {
+            steps {
+                echo 'Hello , From Dhivakar'
+            }
+        }
+
+        stage('Second') {
+            steps {
+                echo 'print Success'
+    }
+}
